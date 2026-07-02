@@ -5,6 +5,9 @@ A full-stack AI-powered travel planning web application that generates personali
 Built with **React 19**, **Vite 8**, **Firebase**, and **Groq (Llama 3.3 70B)**.
 
 ---
+## Deployment Link
+https://ai-trip-planner-seven-eosin.vercel.app/
+
 
 ## Table of Contents
 
