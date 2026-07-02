@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* ─── Design tokens ──────────────────────────────────────── */
+:root {
+  --coral:   #FF6B6B;
+  --teal:    #0EA5A0;
+  --amber:   #F59E0B;
+
+  --bg:        #EEF2F7;
+  --bg-card:   #FFFFFF;
+  --bg-subtle: #E2E8F0;
+  --border:    #C8D6E5;
+
+  --t1: #0D1B2A;
+  --t2: #374151;
+  --t3: #6B7280;
+
+  --nav-bg:    rgba(238,242,247,0.92);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 14px 44px rgba(0,0,0,0.16);
+}
+
+[data-theme="dark"] {
+  --bg:        #0B1623;
+  --bg-card:   #132030;
+  --bg-subtle: #1A2D40;
+  --border:    #1E3448;
+
+  --t1: #F0F6FF;
+  --t2: #94B3CC;
+  --t3: #4E6A80;
+
+  --nav-bg:    rgba(11,22,35,0.92);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.35);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.45);
+  --shadow-lg: 0 14px 44px rgba(0,0,0,0.62);
+}
+
+/* ─── Base ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--t1);
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+/* ─── Scrollbar ────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--teal); }
+
+/* ─── Brand gradient helpers ───────────────────────────── */
+.grad-brand {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 50%, #F59E0B 100%);
+}
+.grad-teal {
+  background: linear-gradient(135deg, #0EA5A0 0%, #06B6D4 100%);
+}
+.text-brand {
+  background: linear-gradient(135deg, #FF6B6B, #F59E0B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Geoapify overrides ───────────────────────────────── */
+.geoapify-autocomplete-input {
+  width: 100% !important;
+  padding: 0.75rem 1rem !important;
+  border: 2px solid var(--border) !important;
+  border-radius: 0.875rem !important;
+  font-size: 0.95rem !important;
+  background: var(--bg-card) !important;
+  color: var(--t1) !important;
+  outline: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+.geoapify-autocomplete-input::placeholder { color: var(--t3) !important; }
+.geoapify-autocomplete-input:focus {
+  border-color: var(--coral) !important;
+  box-shadow: 0 0 0 4px rgba(255,107,107,0.12) !important;
+}
+.geoapify-autocomplete-items {
+  border-radius: 0.875rem !important;
+  border: 2px solid var(--border) !important;
+  background: var(--bg-card) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15) !important;
+  overflow: hidden !important;
+  z-index: 100 !important;
+}
+.geoapify-autocomplete-item {
+  padding: 0.75rem 1rem !important;
+  font-size: 0.9rem !important;
+  color: var(--t1) !important;
+  background: var(--bg-card) !important;
+}
+.geoapify-autocomplete-item:hover,
+.geoapify-autocomplete-item.active {
+  background: var(--bg-subtle) !important;
+  color: var(--coral) !important;
+}

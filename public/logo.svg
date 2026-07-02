@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <circle cx="25" cy="25" r="20" fill="#f56551"/>
+  <text x="25" y="30" font-family="Arial" font-size="16" font-weight="bold" fill="white" text-anchor="middle">AI</text>
+  <text x="115" y="32" font-family="Arial" font-size="18" font-weight="bold" fill="#1a1a1a" text-anchor="middle">TripPlanner</text>
+</svg>
