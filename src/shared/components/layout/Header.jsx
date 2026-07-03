@@ -40,9 +40,13 @@ function Header() {
     >
       <div className="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between">
 
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-          <img src="/logo.svg" alt="AI Trip Planner" className="h-9 w-auto" />
+        {/* Logo — inline so currentColor inherits the theme text colour */}
+        <Link to="/" className="flex items-center gap-2 flex-shrink-0" style={{ color: 'var(--t1)' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" height="36" aria-label="AI Trip Planner">
+            <circle cx="25" cy="25" r="20" fill="#FF6B6B" />
+            <text x="25" y="30" fontFamily="Arial" fontSize="16" fontWeight="bold" fill="white" textAnchor="middle">AI</text>
+            <text x="115" y="32" fontFamily="Arial" fontSize="18" fontWeight="bold" fill="currentColor" textAnchor="middle">TripPlanner</text>
+          </svg>
         </Link>
 
         <div className="flex items-center gap-2">
@@ -150,7 +154,10 @@ function Header() {
         <DialogContent>
           <div className="flex flex-col items-center text-center gap-5">
             <div className="w-16 h-16 rounded-2xl grad-brand flex items-center justify-center shadow-lg">
-              <img src="/logo.svg" alt="logo" className="h-9 w-auto" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" height="36" aria-hidden="true">
+                <circle cx="25" cy="25" r="20" fill="rgba(255,255,255,0.25)" />
+                <text x="25" y="30" fontFamily="Arial" fontSize="16" fontWeight="bold" fill="white" textAnchor="middle">AI</text>
+              </svg>
             </div>
             <div>
               <h2 className="font-bold text-xl" style={S.t1}>Welcome back</h2>
