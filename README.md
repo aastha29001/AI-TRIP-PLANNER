@@ -62,7 +62,7 @@ Users authenticate with Google OAuth, and all generated trips are persisted to F
 ### Backend / Services
 | Service | Purpose |
 |---|---|
-| **Groq** (Llama 3.3 70B) | AI trip generation with structured JSON output |
+| **Groq** (Llama 4 Scout) | AI trip generation with structured JSON output |
 | **Firebase Firestore** | NoSQL database for storing and retrieving trips |
 | **Pexels API** | Travel photography for trip covers and cards |
 | **Geoapify** | City geocoder autocomplete |

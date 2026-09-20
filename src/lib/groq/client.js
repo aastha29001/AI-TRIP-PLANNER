@@ -15,11 +15,14 @@ const SYSTEM_PROMPT =
  *
  * Usage: const result = await chatSession.sendMessage(prompt)
  *        const text   = result.response.text()
+ *
+ * Model: qwen/qwen3.8-27b — only model on this account that supports
+ * response_format: json_object, which is required for reliable structured output.
  */
 export const chatSession = {
   sendMessage: async (prompt) => {
     const completion = await groq.chat.completions.create({
-      model: 'llama-3.3-70b-versatile',
+      model: 'qwen/qwen3.8-27b',
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user',   content: prompt },

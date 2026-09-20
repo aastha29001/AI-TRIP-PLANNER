@@ -77,7 +77,7 @@ function HomePage() {
             style={{ backgroundColor: heroBadgeBg, color: heroBadgeColor, border: `1px solid ${heroBadgeBorder}` }}
           >
             <HiOutlineSparkles className="h-4 w-4" />
-            Powered by Llama 3.3 · 100% Free
+            Powered by Qwen 3 · 100% Free
           </span>
 
           {/* Headline — always white since hero bg is always dark/deep */}
